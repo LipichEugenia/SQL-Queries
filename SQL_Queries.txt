@@ -25,7 +25,3 @@ subquery: select sum(Quantity) as Summ from voodoo.OrderDetails where ProductID 
 23. select Orders.OrderID, Orders.OrderDate, Products.ProductName from voodoo.Orders join voodoo.OrderDetails on Orders.OrderID = OrderDetails.OrderID join voodoo.Products on OrderDetails.ProductID = Products.ProductID where year(OrderDate) = 1997 and ProductName like '____' or '___' or '__' or '_';
 24. select Categories.CategoryName, Products.ProductName from voodoo.Categories join voodoo.Products on Categories.CategoryID = Products.CategoryID join voodoo.OrderDetails on Products.ProductID = OrderDetails.ProductID join voodoo.Orders on OrderDetails.OrderID = Orders.OrderID join voodoo.Customers on Orders.CustomerID = Customers.CustomerID where CategoryName like '% %' and CustomerName = 'Blondel père et fils';
 25. select count(CustomerName) as Buyers from voodoo.Customers join voodoo.Orders on Customers.CustomerID = Orders.CustomerID join voodoo.OrderDetails on Orders.OrderID = OrderDetails.OrderID join voodoo.Products on OrderDetails.ProductID = Products.ProductID where ProductName in ('Queso Cabrales', '%Knäckebröd', 'Louisiana Fiery Hot Pepper Sauce', 'Schoggi Schokolade', 'Gnocchi di nonna Alice');
-
-
-
-
