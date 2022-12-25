@@ -1,0 +1,31 @@
+1. select * from voodoo.Shippers;
+2. select * from voodoo.Employees limit 3;
+3. select BirthDate, FirstName, LastName from voodoo.Employees limit 3;
+4. select FirstName, LastName from voodoo.Employees where year(BirthDate) = 1958;
+5. select * from voodoo.Products where Price between 23 and 25;
+6. select * from voodoo.Products where Price = (select MIN(Price) from voodoo.Products);
+7. select * from voodoo.Products where Price = (select MAX(Price) from voodoo.Products);
+8. select * from voodoo.Products where unit = '10 pkgs.';
+9. select Address from voodoo.Suppliers where City in ('Tokyo', 'Frankfurt', 'Osaka');
+10. select ProductName from voodoo.Products where ProductName like 'G%' and Price >37;
+11. select Country from voodoo.Suppliers where Country like 'S____';
+12. select sum(Price) as Summ from voodoo.Products where ProductName like'%od%' or '%od' or 'od%';
+13. select round(avg(Price),2) as Summ from voodoo.Products where Unit like '%bottle%';
+14. select count(CustomerID) as Countt from voodoo.Customers where NOT Country in ('Germany', 'France');
+15. select FirstName from voodoo.Employees where BirthDate > '1968-01-01' order by FirstName;
+16. select ProductName from voodoo.Products where Price = 13 union select ProductName from voodoo.Products where Price = 15 order by ProductName;
+17. select Products.ProductName, Suppliers.SupplierName from voodoo.Products join voodoo.Suppliers on Products.SupplierID = Suppliers.SupplierID where ProductName like '__m%';
+18. join: select Employees.FirstName, Employees.LastName from voodoo.Employees join voodoo.Orders on Employees.EmployeeID = Orders.EmployeeID where OrderDate = '1996-11-27';
+subquery: select FirstName, LastName from voodoo.Employees where EmployeeID = (select EmployeeID from voodoo.Orders where OrderDate = '1996-11-27');
+19. select Products.ProductName, Suppliers.SupplierName, Products.Price from voodoo.Products join voodoo.Suppliers on Products.SupplierID = Suppliers.SupplierID where SupplierName like 'Grandma Kelly%' and Price > 27;
+20. join: select sum(Quantity) as Summ from voodoo.OrderDetails join voodoo.Products on OrderDetails.ProductID = Products.ProductID where ProductName = 'Queso Cabrales';
+subquery: select sum(Quantity) as Summ from voodoo.OrderDetails where ProductID = (select ProductID from voodoo.Products where ProductName = 'Queso Cabrales');
+21. select Orders.OrderID, Customers.CustomerName, Employees.FirstName, Employees.LastName from voodoo.Orders join voodoo.Customers on Orders.CustomerID = Customers.CustomerID join voodoo.Employees on Orders.EmployeeID = Employees.EmployeeID where Address = 'Ekergatan 24';
+22. select Orders.OrderID, Customers.CustomerName, concat(Employees.FirstName, Employees.LastName) as EmployeeName from voodoo.Orders left join voodoo.Customers on Orders.CustomerID = Customers.CustomerID left join voodoo.Employees on Orders.EmployeeID = Employees.EmployeeID where Address = 'Ekergatan 24';
+23. select Orders.OrderID, Orders.OrderDate, Products.ProductName from voodoo.Orders join voodoo.OrderDetails on Orders.OrderID = OrderDetails.OrderID join voodoo.Products on OrderDetails.ProductID = Products.ProductID where year(OrderDate) = 1997 and ProductName like '____' or '___' or '__' or '_';
+24. select Categories.CategoryName, Products.ProductName from voodoo.Categories join voodoo.Products on Categories.CategoryID = Products.CategoryID join voodoo.OrderDetails on Products.ProductID = OrderDetails.ProductID join voodoo.Orders on OrderDetails.OrderID = Orders.OrderID join voodoo.Customers on Orders.CustomerID = Customers.CustomerID where CategoryName like '% %' and CustomerName = 'Blondel père et fils';
+25. select count(CustomerName) as Buyers from voodoo.Customers join voodoo.Orders on Customers.CustomerID = Orders.CustomerID join voodoo.OrderDetails on Orders.OrderID = OrderDetails.OrderID join voodoo.Products on OrderDetails.ProductID = Products.ProductID where ProductName in ('Queso Cabrales', '%Knäckebröd', 'Louisiana Fiery Hot Pepper Sauce', 'Schoggi Schokolade', 'Gnocchi di nonna Alice');
+
+
+
+
