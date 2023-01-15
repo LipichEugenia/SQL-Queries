@@ -1,0 +1,25 @@
+1. Select all rows from the table with shippers.
+2. Select the first 3 rows from the table with employees.
+3. Select all first names, last names, birthdays from the employee table in the following order: BirthDate, FirstName, LastName, limit the number of rows into 3.
+4. Select the first and last names of employees born in 1958.
+5. Select all products with a price between 23 and 25.
+6. Select products with the lowest price.
+7. Select products with the highest price.
+8. Select all products with Unit '10 pkgs.'.
+9. Select the addresses of suppliers who live in one of the cities: Tokyo, Frankfurt, Osaka.
+10. Select the name of the products starting with the letter “G”, which have a price higher than 37.
+11. Select a list of countries starting with S and consisting of 5 letters, which have suppliers.
+12. Select the sum of all products that contain ”od” in the name; name the column Summ.
+13. Select the average amount of products supplied in bottles, rounding up to 2 decimal places; name the column Summ.
+14. Select the number of customers who do NOT live in France and Germany; name the column Countt.
+15. Select the names of employees born after 01/01/1968. Sort result by name.
+16. Select the names of products that have Price = 13 or 15 and sort in ascending order; use the Select commands with the union of the results through UNION.
+17. Select the names of products with the third letter m in the name and the names of their suppliers.
+18. Select the last names and first names of the employee who placed the order on 1996-11-27 (write a query in two ways: via INNER Join, and using a subquery).
+19. Select all products with supplier "Grandma Kelly's Homestead" and price > 27. As a result, display 3 columns: Product, Supplier, Price.
+20. Select the total quantity of the product 'Queso Cabrales' (name the column Summ) sent to all customers (write a query in two ways: via INNER Join, and using a subquery).
+21. Select all orders that have been sent to "Ekergatan 24" with their customers and employees. As a result, display 3 columns - order ID, customer name, employee first name, employee last name.
+22. Transform the previous query so that the same data is displayed in 3 columns - combine LastName and FirstName from Employees into one column separated by a space and name it EmployeeName (2 LEFT JOINS).
+23. Select all products contained in orders in 1997 with less than 5 letters in the title. As a result, output OrderID, OrderDate, ProductName.
+24. Select the names of products and their categories that are used in orders from a customer named Blondel père et fils and whose categories consist of at least 2 words.
+25. Select the number of customers (name the column Buyers) who ordered one of the products: "Queso Cabrales", "Gustaf's Knäckebröd", "Louisiana Fiery Hot Pepper Sauce", "Schoggi Schokolade", "Gnocchi di nonna Alice".
