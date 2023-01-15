@@ -1,25 +1,25 @@
-1. Выбрать все строки из таблицы c перевозчиками.
-2. Выбрать первые 3 строки из таблицы c сотрудниками.
-3. Из таблицы сотрудников выбрать все имена, фамилии, дни рождения в следующем порядке: BirthDate, FirstName, LastName, количество строк в выборке ограничить 3-мя.
-4. Выбрать имена и фамлии сотрудников, родившихся в 1958 году.
-5. Выбрать все товары с ценой от 23 до 25.
-6. Найти товары с минимальной ценой.
-7. Найти товары с максимальной ценой. 
-8. Выбрать все товары, у которых Unit '10 pkgs.'.
-9. Выбрать адреса поставщиков, которые проживают в одном из городов: Tokyo, Frankfurt, Osaka. 
-10. Выбрать название товаров начинающихся с буквы “G”, у которых цена больше 37.
-11. Вывести список стран начинающихся на S и состоящих из 5 букв, из которых есть поставщики. 
-12. Вывести сумму всех товаров, в названии которых содержится ”od”, столбец назвать Summ.
-13. Вывести среднюю сумму товаров, поставляемых в бутылках, округлив до 2-х знаков после запятой, столбец назвать Summ. 
-14. Найти количество клиентов, которые НЕ проживают в Франции и Германии,  столбец назвать Countt.
-15. Вывести имена сотрудников, родившихся после 01.01.1968 года. Отсортировать результат по имени. 
-16. Выбрать названия товаров, у которых Price = 13 или 15 и отсортировать по возрастанию, использовать Select команды с объединением результатов через UNION.
-17. Показать имена товаров, в названии которых третяя буква m и названия их поставщиков.
-18. Показать имена и фамилии сотрудника, который оформил заказ 1996-11-27 (написать запрос двумя способами: через INNER Join, и используя подзапрос).
-19. Выбрать все товары, у которых поставщик «Grandma Kelly's Homestead» и цена > 27. В результате вывести 3 колонки: Product, Supplier, Price.
-20. Вывести суммарное количество продукта 'Queso Cabrales' (столбец обозвать Summ), отправленного всем покупателям (написать запрос двумя способами: через INNER Join, и используя подзапрос).
-21. Показать все заказы, которые были отправлены по адресу «Ekergatan 24» с их заказчиками и сотрудниками. В результате вывести 3 колонки – ID заказа, имя заказчика, имя сотрудника, фамилия сотрудника.
-22. Преобразовать предыдущий запрос таким образом, чтобы те же данные выводились в 3-х колонках – объединить LastName и FirstName из Employees в одну колонку через пробел и назвать ее EmployeeName (2 LEFT JOINS). 
-23. Показать все продукты, содержащиеся в заказах 1997-го года и в названии которых менее 5 букв. В результате вывести OrderID, OrderDate, ProductName.
-24. Показать названия продуктов и их категорий, которые используются в заказах от заказчика по имени Blondel père et fils и категории которых состоят как минимум из 2-х слов.
-25. Вывести количество заказчиков (колонку назвать Buyers), которые сделали заказали один из  продуктов: «Queso Cabrales», «Gustaf's Knäckebröd», «Louisiana Fiery Hot Pepper Sauce», «Schoggi Schokolade», «Gnocchi di nonna Alice».
+1. Select all rows from the table with shippers.
+2. Select the first 3 rows from the table with employees.
+3. Select all first names, last names, birthdays from the employee table in the following order: BirthDate, FirstName, LastName, limit the number of rows into 3.
+4. Select the first and last names of employees born in 1958.
+5. Select all products with a price between 23 and 25.
+6. Select products with the lowest price.
+7. Select products with the highest price.
+8. Select all products with Unit '10 pkgs.'.
+9. Select the addresses of suppliers who live in one of the cities: Tokyo, Frankfurt, Osaka.
+10. Select the name of the products starting with the letter “G”, which have a price higher than 37.
+11. Select a list of countries starting with S and consisting of 5 letters, which have suppliers.
+12. Select the sum of all products that contain ”od” in the name; name the column Summ.
+13. Select the average amount of products supplied in bottles, rounding up to 2 decimal places; name the column Summ.
+14. Select the number of customers who do NOT live in France and Germany; name the column Countt.
+15. Select the names of employees born after 01/01/1968. Sort result by name.
+16. Select the names of products that have Price = 13 or 15 and sort in ascending order; use the Select commands with the union of the results through UNION.
+17. Select the names of products with the third letter m in the name and the names of their suppliers.
+18. Select the last names and first names of the employee who placed the order on 1996-11-27 (write a query in two ways: via INNER Join, and using a subquery).
+19. Select all products with supplier "Grandma Kelly's Homestead" and price > 27. As a result, display 3 columns: Product, Supplier, Price.
+20. Select the total quantity of the product 'Queso Cabrales' (name the column Summ) sent to all customers (write a query in two ways: via INNER Join, and using a subquery).
+21. Select all orders that have been sent to "Ekergatan 24" with their customers and employees. As a result, display 3 columns - order ID, customer name, employee first name, employee last name.
+22. Transform the previous query so that the same data is displayed in 3 columns - combine LastName and FirstName from Employees into one column separated by a space and name it EmployeeName (2 LEFT JOINS).
+23. Select all products contained in orders in 1997 with less than 5 letters in the title. As a result, output OrderID, OrderDate, ProductName.
+24. Select the names of products and their categories that are used in orders from a customer named Blondel père et fils and whose categories consist of at least 2 words.
+25. Select the number of customers (name the column Buyers) who ordered one of the products: "Queso Cabrales", "Gustaf's Knäckebröd", "Louisiana Fiery Hot Pepper Sauce", "Schoggi Schokolade", "Gnocchi di nonna Alice".
